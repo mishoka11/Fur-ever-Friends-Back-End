@@ -24,7 +24,7 @@ public class GetDogUseCaseImplementation implements GetDogUseCase {
             return mapToGetDogResponse(dogEntity);
         } else {
             // Handle case where dog is not found
-            return null; // Or throw an exception, depending on your requirements
+            return null;
         }
     }
 

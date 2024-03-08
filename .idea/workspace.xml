@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="1st itteration of the individual project." />
+    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="1st itteration of the individual project.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseImplementationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseImplementationTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +78,12 @@
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build Individual_Project_V1.executor": "Run",
     "Gradle.CreateDogUseCaseImplementationTest.createDog_Successfully.executor": "Run",
+    "Gradle.CreateDogUseCaseImplementationTest.testCreateDog.executor": "Run",
+    "Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog.executor": "Run",
+    "Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs.executor": "Run",
+    "Gradle.GetDogUseCaseImplementationTest.executor": "Run",
+    "Gradle.UpdateDogUseCaseImplementationTest.executor": "Run",
+    "Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -109,8 +124,8 @@
       <recent name="fontys.s3.Bussiness.Implementation" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DogCRUD">
-    <configuration name="CreateDogUseCaseImplementationTest.createDog_Successfully" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog">
+    <configuration name="DeleteDogUseCaseImplementationTest.testDeleteDog" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -123,7 +138,103 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.CreateDogUseCaseImplementationTest.createDog_Successfully&quot;" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.DeleteDogUseCaseImplementationTest.testDeleteDog&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="GetAllDogsUseCaseImplementationTest.testGetAllDogs" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.GetAllDogsUseCaseImplementationTest.testGetAllDogs&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="GetDogUseCaseImplementationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.GetDogUseCaseImplementationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateDogUseCaseImplementationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.UpdateDogUseCaseImplementationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -143,7 +254,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CreateDogUseCaseImplementationTest.createDog_Successfully" />
+        <item itemvalue="Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog" />
+        <item itemvalue="Gradle.UpdateDogUseCaseImplementationTest" />
+        <item itemvalue="Gradle.GetDogUseCaseImplementationTest" />
+        <item itemvalue="Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs" />
+        <item itemvalue="Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +284,7 @@
       <workItem from="1709831162598" duration="3111000" />
       <workItem from="1709890976000" duration="2931000" />
       <workItem from="1709898803398" duration="17000" />
-      <workItem from="1709899145075" duration="7000" />
+      <workItem from="1709899145075" duration="1730000" />
     </task>
     <task id="LOCAL-00001" summary="1st itteration of the individual project.">
       <option name="closed" value="true" />
@@ -179,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709891451309</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1st itteration of the individual project.">
+      <option name="closed" value="true" />
+      <created>1709899330545</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709899330546</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
