@@ -13,5 +13,5 @@ public class Dog {
     private String name;
     private String breed;
     private int age;
-    private int years;
+    private int years; // make dog years
 }

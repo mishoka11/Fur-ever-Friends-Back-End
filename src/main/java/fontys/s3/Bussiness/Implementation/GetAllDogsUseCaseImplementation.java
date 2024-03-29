@@ -25,4 +25,5 @@ public class GetAllDogsUseCaseImplementation implements GetAllDogsUseCase {
                 .dogs(allDogs)
                 .build();
     }
+
 }

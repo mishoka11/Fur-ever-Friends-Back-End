@@ -12,6 +12,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/dogs")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:5173")
 public class DogsController {
     private final GetDogUseCase getDogUseCase;
     private final GetAllDogsUseCase GetAllDogsUseCase;

@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="1st itteration of the individual project.">
+    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="Added tests to the business logic classes.">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseImplementationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseImplementationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseImplementationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/DogsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/DogsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/Dog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +34,17 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Individual_Project_V1" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Individual_Project_V1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Individual_Project_V1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -48,8 +56,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Dockerfile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -73,46 +82,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build Individual_Project_V1.executor": "Run",
-    "Gradle.CreateDogUseCaseImplementationTest.createDog_Successfully.executor": "Run",
-    "Gradle.CreateDogUseCaseImplementationTest.testCreateDog.executor": "Run",
-    "Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog.executor": "Run",
-    "Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs.executor": "Run",
-    "Gradle.GetDogUseCaseImplementationTest.executor": "Run",
-    "Gradle.UpdateDogUseCaseImplementationTest.executor": "Run",
-    "Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.DogCRUD.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/MSI/Desktop/New folder/fur-ever-friends-s3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/MSI/Desktop/Individual_Project_V1/src/main/java/fontys/s3/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build Individual_Project_V1.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build fur-ever-friends-s3.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Building Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CreateDogUseCaseImplementationTest.createDog_Successfully.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CreateDogUseCaseImplementationTest.testCreateDog.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GetDogUseCaseImplementationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UpdateDogUseCaseImplementationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.fur-ever-friends-s3 [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.fur-ever-friends-s3 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DogCRUD.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI/Downloads/todolist-backend-starter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/MSI/Desktop/Individual_Project_V1/src/main/java/fontys/s3/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MSI\Desktop\Individual_Project_V1" />
@@ -124,79 +138,7 @@
       <recent name="fontys.s3.Bussiness.Implementation" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog">
-    <configuration name="DeleteDogUseCaseImplementationTest.testDeleteDog" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.DeleteDogUseCaseImplementationTest.testDeleteDog&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="GetAllDogsUseCaseImplementationTest.testGetAllDogs" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.GetAllDogsUseCaseImplementationTest.testGetAllDogs&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="GetDogUseCaseImplementationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.GetDogUseCaseImplementationTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.DogCRUD">
     <configuration name="UpdateDogUseCaseImplementationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -211,6 +153,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;fontys.s3.Bussiness.Implementation.UpdateDogUseCaseImplementationTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,6 +211,50 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="fur-ever-friends-s3 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="fur-ever-friends-s3 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="DogCRUD" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Individual_Project_V1.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="fontys.s3.DogCRUD" />
@@ -254,11 +264,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.fur-ever-friends-s3 [build]" />
+        <item itemvalue="Gradle.fur-ever-friends-s3 [clean]" />
+        <item itemvalue="Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog" />
         <item itemvalue="Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog" />
         <item itemvalue="Gradle.UpdateDogUseCaseImplementationTest" />
-        <item itemvalue="Gradle.GetDogUseCaseImplementationTest" />
-        <item itemvalue="Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs" />
-        <item itemvalue="Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog" />
       </list>
     </recent_temporary>
   </component>
@@ -284,7 +294,18 @@
       <workItem from="1709831162598" duration="3111000" />
       <workItem from="1709890976000" duration="2931000" />
       <workItem from="1709898803398" duration="17000" />
-      <workItem from="1709899145075" duration="1730000" />
+      <workItem from="1709899145075" duration="2637000" />
+      <workItem from="1709904496194" duration="1340000" />
+      <workItem from="1710163259319" duration="519000" />
+      <workItem from="1710249756698" duration="1599000" />
+      <workItem from="1710354209435" duration="1032000" />
+      <workItem from="1710404063887" duration="1195000" />
+      <workItem from="1710681169732" duration="118000" />
+      <workItem from="1711375902544" duration="1984000" />
+      <workItem from="1711457423704" duration="101000" />
+      <workItem from="1711458135168" duration="3317000" />
+      <workItem from="1711631257904" duration="2719000" />
+      <workItem from="1711714536759" duration="3111000" />
     </task>
     <task id="LOCAL-00001" summary="1st itteration of the individual project.">
       <option name="closed" value="true" />
@@ -302,14 +323,38 @@
       <option name="project" value="LOCAL" />
       <updated>1709899330546</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added tests to the business logic classes.">
+      <option name="closed" value="true" />
+      <created>1709901165076</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709901165076</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st itteration of the individual project." />
-    <option name="LAST_COMMIT_MESSAGE" value="1st itteration of the individual project." />
+    <MESSAGE value="Added tests to the business logic classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests to the business logic classes." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
