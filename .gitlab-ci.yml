@@ -21,3 +21,17 @@ sonarqube-check:
     stage: sonarqube-check
     script:
         - ./gradlew test sonar jacocoTestReport
+
+#spring:
+#    datasource:
+#        url: jdbc:mysql://localhost:3306/MYSQL_IndividualPrj_S3?useSSL=false&serverTimezone=UTC
+#        username: root
+#        password: 123m123M
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#    jpa:
+#        properties:
+#            hibernate:
+#                dialect: org.hibernate.dialect.MySQL8Dialect
+#        hibernate:
+#            ddl-auto: update
+#        show-sql: true

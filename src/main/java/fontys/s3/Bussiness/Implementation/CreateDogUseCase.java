@@ -7,4 +7,3 @@ public interface CreateDogUseCase {
     CreateDogResponse createDog(CreateDogRequest request);
 }
 
-//fsdfsfdsds

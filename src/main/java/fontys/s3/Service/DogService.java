@@ -1,21 +1,24 @@
-package fontys.s3.Bussiness.Implementation;
+package fontys.s3.Service;
 
 import fontys.s3.Domain.CreateDogRequest;
 import fontys.s3.Domain.CreateDogResponse;
-import fontys.s3.Persistence.Implementation.DogRepository;
 import fontys.s3.Persistence.Entity.DogEntity;
-import lombok.AllArgsConstructor;
+import fontys.s3.Persistence.Implementation.DogRepositoryImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
-@AllArgsConstructor
-public class CreateDogUseCaseImplementation implements CreateDogUseCase {
+public class DogService {
 
-    private final DogRepository dogRepository;
+    private final DogRepositoryImplementation dogRepository;
 
+    @Autowired
+    public DogService(DogRepositoryImplementation dogRepository) {
+        this.dogRepository = dogRepository;
+    }
 
-    @Override
     public CreateDogResponse createDog(CreateDogRequest request) {
         DogEntity dogEntity = DogEntity.builder()
                 .name(request.getName())
@@ -24,10 +27,18 @@ public class CreateDogUseCaseImplementation implements CreateDogUseCase {
                 .years(request.getYears())
                 .build();
 
-        DogEntity dogEntity1 = dogRepository.save(dogEntity);
+        dogEntity = dogRepository.save(dogEntity);
 
         return CreateDogResponse.builder()
-                .dogId(dogEntity1.getId())
+                .dogId(dogEntity.getId())
                 .build();
+    }
+
+    public Optional<DogEntity> findDogById(long dogId) {
+        return dogRepository.findById(dogId);
+    }
+
+    public void deleteDogById(long dogId) {
+        dogRepository.deleteById(dogId);
     }
 }
