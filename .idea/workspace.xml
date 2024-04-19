@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing.">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/your_database_name_1.tariVA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/docker_demo_db.O3k7Kw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment=" Integration tests created but are not yet passing commented for test purposes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,54 +80,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Build Individual_Project_V1.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build fur-ever-friends-s3.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Building Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateDogUseCaseImplementationTest.createDog_Successfully.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateDogUseCaseImplementationTest.testCreateDog.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DogRepositoryIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DogRepositoryIntegrationTest.testSaveAndFindById.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetDogUseCaseImplementationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'fontys.s3.Bussiness.Implementation'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UpdateDogUseCaseImplementationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fur-ever-friends-s3 [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fur-ever-friends-s3 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.DogCRUD.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI/Desktop/Fur ever friends BE and docs/fur-ever-friends-s3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/MSI/Desktop/Individual_Project_V1/src/main/java/fontys/s3/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build Individual_Project_V1.executor": "Run",
+    "Gradle.Build fur-ever-friends-s3.executor": "Run",
+    "Gradle.Building Gradle Dependencies.executor": "Run",
+    "Gradle.CreateDogUseCaseImplementationTest.createDog_Successfully.executor": "Run",
+    "Gradle.CreateDogUseCaseImplementationTest.testCreateDog.executor": "Run",
+    "Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog.executor": "Run",
+    "Gradle.DogRepositoryIntegrationTest.executor": "Run",
+    "Gradle.DogRepositoryIntegrationTest.testSaveAndFindById.executor": "Run",
+    "Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs.executor": "Run",
+    "Gradle.GetDogUseCaseImplementationTest.executor": "Run",
+    "Gradle.Tests in 'fontys.s3.Bussiness.Implementation'.executor": "Run",
+    "Gradle.UpdateDogUseCaseImplementationTest.executor": "Run",
+    "Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog.executor": "Run",
+    "Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog.executor": "Run",
+    "Gradle.fur-ever-friends-s3 [build].executor": "Run",
+    "Gradle.fur-ever-friends-s3 [clean].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.DogCRUD.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/MSI/Desktop/Fur ever friends BE and docs/fur-ever-friends-s3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/MSI/Desktop/Individual_Project_V1/src/main/java/fontys/s3/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MSI\Desktop\Individual_Project_V1" />
@@ -156,7 +144,7 @@
       <recent name="fontys.s3.Bussiness.Implementation" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DogRepositoryIntegrationTest.testSaveAndFindById">
+  <component name="RunManager" selected="Spring Boot.DogCRUD">
     <configuration name="DogRepositoryIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -337,6 +325,7 @@
       <workItem from="1713269101555" duration="619000" />
       <workItem from="1713353652319" duration="1711000" />
       <workItem from="1713384864069" duration="727000" />
+      <workItem from="1713527099700" duration="1091000" />
     </task>
     <task id="LOCAL-00001" summary="1st itteration of the individual project.">
       <option name="closed" value="true" />
@@ -418,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713385560945</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary=" Integration tests created but are not yet passing commented for test purposes.">
+      <option name="closed" value="true" />
+      <created>1713527198509</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713527198509</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +439,8 @@
     <MESSAGE value="Sonarqube setup" />
     <MESSAGE value="Sonarqube setup 2.0" />
     <MESSAGE value="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing." />
+    <MESSAGE value=" Integration tests created but are not yet passing commented for test purposes." />
+    <option name="LAST_COMMIT_MESSAGE" value=" Integration tests created but are not yet passing commented for test purposes." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
