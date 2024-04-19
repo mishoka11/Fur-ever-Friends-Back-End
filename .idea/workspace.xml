@@ -4,37 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Service/DogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties_spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Persistence/Implementation/DogRepositoryIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing.">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/8a37c41b-9e29-4d0b-a42d-c8b5e25913ef/storage_v2/_src_/schema/your_database_name_1.tariVA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/docker_demo_db.O3k7Kw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ceeb9144-5b71-4fa9-b71c-c7958f7790b4/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/CreateDogUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/CreateDogUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/DogCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/DogCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Implementation/DogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Implementation/DogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Implementation/DogRepositoryImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Implementation/DogRepositoryImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseImplementationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseImplementationTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,6 +336,7 @@
       <workItem from="1713179786202" duration="8529000" />
       <workItem from="1713269101555" duration="619000" />
       <workItem from="1713353652319" duration="1711000" />
+      <workItem from="1713384864069" duration="727000" />
     </task>
     <task id="LOCAL-00001" summary="1st itteration of the individual project.">
       <option name="closed" value="true" />
@@ -401,7 +386,39 @@
       <option name="project" value="LOCAL" />
       <updated>1712577928195</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing.">
+      <option name="closed" value="true" />
+      <created>1713384979759</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713384979759</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing.">
+      <option name="closed" value="true" />
+      <created>1713385310175</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713385310175</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing.">
+      <option name="closed" value="true" />
+      <created>1713385480211</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713385480211</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing.">
+      <option name="closed" value="true" />
+      <created>1713385560945</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713385560945</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +441,8 @@
     <MESSAGE value="Added Docker to the project as well as  CORS setup" />
     <MESSAGE value="Sonarqube setup" />
     <MESSAGE value="Sonarqube setup 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sonarqube setup 2.0" />
+    <MESSAGE value="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
