@@ -44,6 +44,8 @@ sonarqube {
         property "sonar.projectName", "Fur_ever_frienda"
         property "sonar.qualitygate.wait", true
         property "sonar.host.url","http://localhost:9000"
+        property "sonar.java.coveragePlugin", "jacoco"
+        property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/jacoco/test/jacocoTestReport.xml"
         property "sonar.token", "sqp_338ea8e1b5e240dd33cbe77eb1288250ca226675"
     }
 }

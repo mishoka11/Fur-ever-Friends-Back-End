@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="Sonarqube testing">
+    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="Reverting gradle build">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +94,29 @@
     "Gradle.Building Gradle Dependencies.executor": "Run",
     "Gradle.CreateDogUseCaseImplementationTest.createDog_Successfully.executor": "Run",
     "Gradle.CreateDogUseCaseImplementationTest.testCreateDog.executor": "Run",
+    "Gradle.CreateDogUseCaseUnitTest.executor": "Run",
+    "Gradle.CreateDogUseCaseUnitTest.testCreateDogWithEmptyNameShouldThrowException.executor": "Run",
+    "Gradle.CreateDogUseCaseUnitTest.testCreateDogWithNegativeAgeShouldThrowException.executor": "Run",
+    "Gradle.CreateDogUseCaseUnitTest.testCreateDogWithNullBreedShouldThrowException.executor": "Run",
     "Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.executor": "Debug",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteDogWithNegativeIdShouldThrowException.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteDogWithZeroIdShouldThrowException.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteExistingDogShouldSucceed.executor": "Debug",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteMultipleDogsShouldSucceed.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldThrowException.executor": "Debug",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldThrowIllegalArgumentException.executor": "Run",
     "Gradle.DogRepositoryIntegrationTest.executor": "Run",
     "Gradle.DogRepositoryIntegrationTest.testSaveAndFindById.executor": "Run",
     "Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs.executor": "Run",
+    "Gradle.GetAllDogsUseCaseUnitTest.executor": "Run",
+    "Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_EmptyRepository.executor": "Run",
+    "Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_NullRequest.executor": "Run",
+    "Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_RepositoryError.executor": "Run",
     "Gradle.GetDogUseCaseImplementationTest.executor": "Run",
+    "Gradle.GetDogUseCaseUnitTest.executor": "Run",
+    "Gradle.GetDogUseCaseUnitTest.testGetAllDogs_NullDogEntities.executor": "Run",
+    "Gradle.Tests in 'Individual_Project_V1.test'.executor": "Run",
     "Gradle.Tests in 'fontys.s3.Bussiness.Implementation'.executor": "Run",
     "Gradle.UpdateDogUseCaseImplementationTest.executor": "Run",
     "Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog.executor": "Run",
@@ -143,8 +168,8 @@
       <recent name="fontys.s3.Bussiness.Implementation" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DogCRUD">
-    <configuration name="DogRepositoryIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.GetDogUseCaseUnitTest">
+    <configuration name="GetAllDogsUseCaseUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -157,7 +182,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fontys.s3.Persistence.Implementation.DogRepositoryIntegrationTest&quot;" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.GetAllDogsUseCaseUnitTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -168,7 +193,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="DogRepositoryIntegrationTest.testSaveAndFindById" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GetAllDogsUseCaseUnitTest.testGetAllDogs_EmptyRepository" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -181,7 +206,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fontys.s3.Persistence.Implementation.DogRepositoryIntegrationTest.testSaveAndFindById&quot;" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.GetAllDogsUseCaseUnitTest.testGetAllDogs_EmptyRepository&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -192,7 +217,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'fontys.s3.Bussiness.Implementation'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GetAllDogsUseCaseUnitTest.testGetAllDogs_RepositoryError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -205,7 +230,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.*&quot;" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.GetAllDogsUseCaseUnitTest.testGetAllDogs_RepositoryError&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -216,48 +241,52 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="fur-ever-friends-s3 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GetDogUseCaseUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.GetDogUseCaseUnitTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="fur-ever-friends-s3 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GetDogUseCaseUnitTest.testGetAllDogs_NullDogEntities" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.GetDogUseCaseUnitTest.testGetAllDogs_NullDogEntities&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="DogCRUD" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -269,11 +298,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DogRepositoryIntegrationTest.testSaveAndFindById" />
-        <item itemvalue="Gradle.DogRepositoryIntegrationTest" />
-        <item itemvalue="Gradle.Tests in 'fontys.s3.Bussiness.Implementation'" />
-        <item itemvalue="Gradle.fur-ever-friends-s3 [build]" />
-        <item itemvalue="Gradle.fur-ever-friends-s3 [clean]" />
+        <item itemvalue="Gradle.GetDogUseCaseUnitTest" />
+        <item itemvalue="Gradle.GetDogUseCaseUnitTest.testGetAllDogs_NullDogEntities" />
+        <item itemvalue="Gradle.GetAllDogsUseCaseUnitTest" />
+        <item itemvalue="Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_RepositoryError" />
+        <item itemvalue="Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_EmptyRepository" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +353,9 @@
       <workItem from="1713269101555" duration="619000" />
       <workItem from="1713353652319" duration="1711000" />
       <workItem from="1713384864069" duration="727000" />
-      <workItem from="1713527099700" duration="1237000" />
+      <workItem from="1713527099700" duration="3243000" />
+      <workItem from="1713783436487" duration="1257000" />
+      <workItem from="1715254974327" duration="6303000" />
     </task>
     <task id="LOCAL-00001" summary="1st itteration of the individual project.">
       <option name="closed" value="true" />
@@ -422,7 +453,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713528225702</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Reverting gradle build">
+      <option name="closed" value="true" />
+      <created>1713528520792</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713528520792</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +487,8 @@
     <MESSAGE value="Database setup established, unit tests now work with mockito properly. Integration tests created but are not yet passing." />
     <MESSAGE value=" Integration tests created but are not yet passing commented for test purposes." />
     <MESSAGE value="Sonarqube testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sonarqube testing" />
+    <MESSAGE value="Reverting gradle build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reverting gradle build" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

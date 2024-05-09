@@ -24,8 +24,7 @@ public class GetDogUseCaseImplementation implements GetDogUseCase {
             DogEntity dogEntity = optionalDogEntity.get();
             return mapToGetDogResponse(dogEntity);
         } else {
-            // Handle case where dog is not found
-            return null;
+            throw new RuntimeException("Dog not found with id: " + dogId);
         }
     }
 
