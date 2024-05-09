@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="Reverting gradle build">
+    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="Added Happy and unhappy flow test for business logic layer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +95,7 @@
     "Gradle.CreateDogUseCaseUnitTest.testCreateDogWithNegativeAgeShouldThrowException.executor": "Run",
     "Gradle.CreateDogUseCaseUnitTest.testCreateDogWithNullBreedShouldThrowException.executor": "Run",
     "Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog.executor": "Run",
-    "Gradle.DeleteDogUseCaseUnitTest.executor": "Debug",
+    "Gradle.DeleteDogUseCaseUnitTest.executor": "Run",
     "Gradle.DeleteDogUseCaseUnitTest.testDeleteDogWithNegativeIdShouldThrowException.executor": "Run",
     "Gradle.DeleteDogUseCaseUnitTest.testDeleteDogWithZeroIdShouldThrowException.executor": "Run",
     "Gradle.DeleteDogUseCaseUnitTest.testDeleteExistingDogShouldSucceed.executor": "Debug",
@@ -121,6 +117,7 @@
     "Gradle.UpdateDogUseCaseImplementationTest.executor": "Run",
     "Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog.executor": "Run",
     "Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog.executor": "Run",
+    "Gradle.UpdateDogUseCaseUnitTest.executor": "Run",
     "Gradle.fur-ever-friends-s3 [build].executor": "Run",
     "Gradle.fur-ever-friends-s3 [clean].executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -168,8 +165,8 @@
       <recent name="fontys.s3.Bussiness.Implementation" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GetDogUseCaseUnitTest">
-    <configuration name="GetAllDogsUseCaseUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.DeleteDogUseCaseUnitTest">
+    <configuration name="DeleteDogUseCaseUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -182,7 +179,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.GetAllDogsUseCaseUnitTest&quot;" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.DeleteDogUseCaseUnitTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,7 +190,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GetAllDogsUseCaseUnitTest.testGetAllDogs_EmptyRepository" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeleteDogUseCaseUnitTest.testDeleteDogWithNegativeIdShouldThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -206,7 +203,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.GetAllDogsUseCaseUnitTest.testGetAllDogs_EmptyRepository&quot;" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.DeleteDogUseCaseUnitTest.testDeleteDogWithNegativeIdShouldThrowException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -217,7 +214,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GetAllDogsUseCaseUnitTest.testGetAllDogs_RepositoryError" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeleteDogUseCaseUnitTest.testDeleteMultipleDogsShouldSucceed" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -230,7 +227,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.GetAllDogsUseCaseUnitTest.testGetAllDogs_RepositoryError&quot;" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.DeleteDogUseCaseUnitTest.testDeleteMultipleDogsShouldSucceed&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -241,7 +238,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GetDogUseCaseUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldDoNothing" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -254,7 +251,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.GetDogUseCaseUnitTest&quot;" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldDoNothing&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -265,7 +262,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GetDogUseCaseUnitTest.testGetAllDogs_NullDogEntities" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'fontys.s3.Bussiness.Implementation'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -278,7 +275,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;fontys.s3.Bussiness.Implementation.GetDogUseCaseUnitTest.testGetAllDogs_NullDogEntities&quot;" />
+            <option value="&quot;fontys.s3.Bussiness.Implementation.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -298,11 +295,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GetDogUseCaseUnitTest" />
-        <item itemvalue="Gradle.GetDogUseCaseUnitTest.testGetAllDogs_NullDogEntities" />
-        <item itemvalue="Gradle.GetAllDogsUseCaseUnitTest" />
-        <item itemvalue="Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_RepositoryError" />
-        <item itemvalue="Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_EmptyRepository" />
+        <item itemvalue="Gradle.DeleteDogUseCaseUnitTest" />
+        <item itemvalue="Gradle.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldDoNothing" />
+        <item itemvalue="Gradle.DeleteDogUseCaseUnitTest.testDeleteMultipleDogsShouldSucceed" />
+        <item itemvalue="Gradle.DeleteDogUseCaseUnitTest.testDeleteDogWithNegativeIdShouldThrowException" />
+        <item itemvalue="Gradle.Tests in 'fontys.s3.Bussiness.Implementation'" />
       </list>
     </recent_temporary>
   </component>
@@ -355,7 +352,7 @@
       <workItem from="1713384864069" duration="727000" />
       <workItem from="1713527099700" duration="3243000" />
       <workItem from="1713783436487" duration="1257000" />
-      <workItem from="1715254974327" duration="6303000" />
+      <workItem from="1715254974327" duration="8689000" />
     </task>
     <task id="LOCAL-00001" summary="1st itteration of the individual project.">
       <option name="closed" value="true" />
@@ -461,7 +458,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713528520792</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added Happy and unhappy flow test for business logic layer">
+      <option name="closed" value="true" />
+      <created>1715261725796</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715261725796</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +493,8 @@
     <MESSAGE value=" Integration tests created but are not yet passing commented for test purposes." />
     <MESSAGE value="Sonarqube testing" />
     <MESSAGE value="Reverting gradle build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reverting gradle build" />
+    <MESSAGE value="Added Happy and unhappy flow test for business logic layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Happy and unhappy flow test for business logic layer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,27 +1,27 @@
 package fontys.s3.Bussiness.Implementation;
-import fontys.s3.Domain.Dog;
-import fontys.s3.Persistence.Entity.DogEntity;
-import fontys.s3.Persistence.Implementation.DogRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import fontys.s3.Persistence.Implementation.DogRepository;
+import org.springframework.stereotype.Service;
 
 @Service
 public class DeleteDogUseCaseImplementation implements DeleteDogUseCase {
-    private final DogRepository dogRepository;
 
-    @Autowired
+    private DogRepository dogRepository;
+
     public DeleteDogUseCaseImplementation(DogRepository dogRepository) {
         this.dogRepository = dogRepository;
     }
 
     @Override
-    public void deleteDog(long dogId) {
-        Optional<DogEntity> dog = dogRepository.findById(dogId);
-        if (dog.isEmpty()) {
-            throw new IllegalArgumentException("Dog with ID " + dogId + " does not exist");
+    public void deleteDog(long id) {
+        if (id <= 0) {
+            throw new IllegalArgumentException("Dog ID must be positive");
         }
-        dogRepository.deleteById(dogId);
+
+        if (!dogRepository.existsById(id)) {
+            throw new IllegalArgumentException("Dog with ID " + id + " does not exist");
+        }
+
+        dogRepository.deleteById(id);
     }
 }
