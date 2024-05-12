@@ -1,7 +1,8 @@
 package fontys.s3.Bussiness.Implementation;
 
-import fontys.s3.Domain.GetAllDogsRequest;
-import fontys.s3.Domain.GetAllDogsResponse;
+import fontys.s3.Bussiness.Implementation.Dog_Impl.GetAllDogsUseCaseImplementation;
+import fontys.s3.Domain.DogDomain.GetAllDogsRequest;
+import fontys.s3.Domain.DogDomain.GetAllDogsResponse;
 import fontys.s3.Persistence.Implementation.DogRepository;
 import fontys.s3.Persistence.Entity.DogEntity;
 import org.junit.jupiter.api.Test;

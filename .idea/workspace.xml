@@ -4,15 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="Updated, all tests are passing">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/UserDto.java" afterDir="false" />
+    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="First itteration of authentication logic">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/CreateAndDeleteDogUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/CreateUserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/DeleteUserUCImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/GetAllUsersUCImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/GetAllUsersUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/GetUserUCImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/GetUserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/UpdateUserUCImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/UpdateUserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/UserConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/CreateUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/CreateUserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/DeleteUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/DeleteUserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/GetAllUsersRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/GetAllUsersResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/GetUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/GetUserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/UpdateUserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/UpdateUserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Implementation/Repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/CreateDogUseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseImplementation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/DeleteDogUseCaseImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/DogConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/DogConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/GetAllDogsUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/GetAllDogsUseCaseImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetDogUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/GetDogUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/GetDogUseCaseImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/UpdateDogUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/UpdateDogUseCaseImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/DogsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/DogsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/CreateDogRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/CreateDogRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/CreateDogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/CreateDogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DeleteDogRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/DeleteDogRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DeleteDogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/DeleteDogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/GetAllDogsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/GetAllDogsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/GetAllDogsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/GetAllDogsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/GetDogRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/GetDogRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/GetDogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/GetDogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UpdateDogRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/UpdateDogRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UpdateDogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/UpdateDogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Service/DogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Service/DogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/CreateDogUseCaseUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/DeleteDogUseCaseUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetAllDogsUseCaseUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/GetDogUseCaseUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/fontys/s3/Bussiness/Implementation/UpdateDogUseCaseUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,10 +105,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Dockerfile" />
         <option value="spring-beans.schema" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -86,75 +133,75 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Gradle.Build Individual_Project_V1.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build fur-ever-friends-s3.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Building Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateDogUseCaseImplementationTest.createDog_Successfully.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateDogUseCaseImplementationTest.testCreateDog.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateDogUseCaseUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateDogUseCaseUnitTest.testCreateDogWithEmptyNameShouldThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateDogUseCaseUnitTest.testCreateDogWithNegativeAgeShouldThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CreateDogUseCaseUnitTest.testCreateDogWithNullBreedShouldThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteDogUseCaseUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteDogUseCaseUnitTest.testDeleteDogWithNegativeIdShouldThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteDogUseCaseUnitTest.testDeleteDogWithZeroIdShouldThrowException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteDogUseCaseUnitTest.testDeleteExistingDogShouldSucceed.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.DeleteDogUseCaseUnitTest.testDeleteMultipleDogsShouldSucceed.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldDoNothing.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldThrowException.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldThrowIllegalArgumentException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteDogUseCaseUnitTest.testDeleteOneDogShouldSucceed.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DogRepositoryIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DogRepositoryIntegrationTest.testSaveAndFindById.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetAllDogsUseCaseUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_EmptyRepository.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_NullRequest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_RepositoryError.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetDogUseCaseImplementationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetDogUseCaseUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetDogUseCaseUnitTest.testGetAllDogs_NullDogEntities.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'Individual_Project_V1.test'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'fontys.s3.Bussiness.Implementation'.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UpdateDogUseCaseImplementationTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UpdateDogUseCaseUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fur-ever-friends-s3 [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.fur-ever-friends-s3 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.DogCRUD.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI/Desktop/Fur ever friends BE and docs/fur-ever-friends-s3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/MSI/Desktop/Individual_Project_V1/src/main/java/fontys/s3/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build Individual_Project_V1.executor": "Run",
+    "Gradle.Build fur-ever-friends-s3.executor": "Run",
+    "Gradle.Building Gradle Dependencies.executor": "Run",
+    "Gradle.CreateDogUseCaseImplementationTest.createDog_Successfully.executor": "Run",
+    "Gradle.CreateDogUseCaseImplementationTest.testCreateDog.executor": "Run",
+    "Gradle.CreateDogUseCaseUnitTest.executor": "Run",
+    "Gradle.CreateDogUseCaseUnitTest.testCreateDogWithEmptyNameShouldThrowException.executor": "Run",
+    "Gradle.CreateDogUseCaseUnitTest.testCreateDogWithNegativeAgeShouldThrowException.executor": "Run",
+    "Gradle.CreateDogUseCaseUnitTest.testCreateDogWithNullBreedShouldThrowException.executor": "Run",
+    "Gradle.DeleteDogUseCaseImplementationTest.testDeleteDog.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteDogWithNegativeIdShouldThrowException.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteDogWithZeroIdShouldThrowException.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteExistingDogShouldSucceed.executor": "Debug",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteMultipleDogsShouldSucceed.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldDoNothing.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldThrowException.executor": "Debug",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteNonExistingDogShouldThrowIllegalArgumentException.executor": "Run",
+    "Gradle.DeleteDogUseCaseUnitTest.testDeleteOneDogShouldSucceed.executor": "Run",
+    "Gradle.DogRepositoryIntegrationTest.executor": "Run",
+    "Gradle.DogRepositoryIntegrationTest.testSaveAndFindById.executor": "Run",
+    "Gradle.GetAllDogsUseCaseImplementationTest.testGetAllDogs.executor": "Run",
+    "Gradle.GetAllDogsUseCaseUnitTest.executor": "Run",
+    "Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_EmptyRepository.executor": "Run",
+    "Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_NullRequest.executor": "Run",
+    "Gradle.GetAllDogsUseCaseUnitTest.testGetAllDogs_RepositoryError.executor": "Run",
+    "Gradle.GetDogUseCaseImplementationTest.executor": "Run",
+    "Gradle.GetDogUseCaseUnitTest.executor": "Run",
+    "Gradle.GetDogUseCaseUnitTest.testGetAllDogs_NullDogEntities.executor": "Run",
+    "Gradle.Tests in 'Individual_Project_V1.test'.executor": "Run",
+    "Gradle.Tests in 'fontys.s3.Bussiness.Implementation'.executor": "Run",
+    "Gradle.UpdateDogUseCaseImplementationTest.executor": "Run",
+    "Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_ExistingDog.executor": "Run",
+    "Gradle.UpdateDogUseCaseImplementationTest.testUpdateDog_NonExistingDog.executor": "Run",
+    "Gradle.UpdateDogUseCaseUnitTest.executor": "Run",
+    "Gradle.fur-ever-friends-s3 [build].executor": "Run",
+    "Gradle.fur-ever-friends-s3 [clean].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.DogCRUD.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/MSI/Desktop/Fur ever friends BE and docs/fur-ever-friends-s3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/MSI/Desktop/Individual_Project_V1/src/main/java/fontys/s3/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MSI\Desktop\Individual_Project_V1" />
@@ -171,7 +218,7 @@
       <recent name="fontys.s3.Bussiness.Implementation" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'fontys.s3.Bussiness.Implementation'">
+  <component name="RunManager" selected="Spring Boot.DogCRUD">
     <configuration name="DeleteDogUseCaseUnitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -360,7 +407,8 @@
       <workItem from="1713783436487" duration="1257000" />
       <workItem from="1715254974327" duration="11094000" />
       <workItem from="1715416608459" duration="7043000" />
-      <workItem from="1715513021414" duration="1291000" />
+      <workItem from="1715513021414" duration="1940000" />
+      <workItem from="1715518648040" duration="4272000" />
     </task>
     <task id="LOCAL-00001" summary="1st itteration of the individual project.">
       <option name="closed" value="true" />
@@ -482,7 +530,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715264124403</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="First itteration of authentication logic">
+      <option name="closed" value="true" />
+      <created>1715518504614</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715518504614</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +567,8 @@
     <MESSAGE value="Reverting gradle build" />
     <MESSAGE value="Added Happy and unhappy flow test for business logic layer" />
     <MESSAGE value="Updated, all tests are passing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated, all tests are passing" />
+    <MESSAGE value="First itteration of authentication logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="First itteration of authentication logic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

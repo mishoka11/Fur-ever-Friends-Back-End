@@ -1,7 +1,9 @@
 package fontys.s3.Controller;
 
-import fontys.s3.Bussiness.Implementation.*;
-import fontys.s3.Domain.*;
+import fontys.s3.Bussiness.Implementation.Dog_Impl.CreateAndDeleteDogUseCase;
+import fontys.s3.Bussiness.Implementation.Dog_Impl.GetDogUseCase;
+import fontys.s3.Bussiness.Implementation.Dog_Impl.UpdateDogUseCase;
+import fontys.s3.Domain.DogDomain.*;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +17,9 @@ import javax.validation.Valid;
 @CrossOrigin(origins = "http://localhost:5173")
 public class DogsController {
     private final GetDogUseCase getDogUseCase;
-    private final GetAllDogsUseCase GetAllDogsUseCase;
-    private final DeleteDogUseCase deleteDogUseCase;
-    private final CreateDogUseCase createDogUseCase;
+    private final fontys.s3.Bussiness.Implementation.Dog_Impl.GetAllDogsUseCase GetAllDogsUseCase;
+    private final CreateAndDeleteDogUseCase.DeleteDogUseCase deleteDogUseCase;
+    private final CreateAndDeleteDogUseCase createDogUseCase;
     private final UpdateDogUseCase updateDogUseCase;
     @GetMapping("/{id}")
     public ResponseEntity<Dog> getDog(@PathVariable("id") long id) {

@@ -1,7 +1,8 @@
 package fontys.s3.Bussiness.Implementation;
 
-import fontys.s3.Domain.CreateDogRequest;
-import fontys.s3.Domain.CreateDogResponse;
+import fontys.s3.Bussiness.Implementation.Dog_Impl.CreateAndDeleteDogUseCase;
+import fontys.s3.Domain.DogDomain.CreateDogRequest;
+import fontys.s3.Domain.DogDomain.CreateDogResponse;
 import fontys.s3.Persistence.Implementation.DogRepository;
 import fontys.s3.Persistence.Entity.DogEntity;
 import org.junit.jupiter.api.Test;
@@ -23,7 +24,7 @@ class CreateDogUseCaseUnitTest {
         MockitoAnnotations.initMocks(this);
 
         // Given
-        CreateDogUseCaseImplementation useCase = new CreateDogUseCaseImplementation(dogRepository);
+        CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation useCase = new CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation(dogRepository);
         CreateDogRequest request = new CreateDogRequest("Fido", "Labrador", 5, 0);
 
         DogEntity savedDogEntity = DogEntity.builder()
@@ -48,7 +49,7 @@ class CreateDogUseCaseUnitTest {
         MockitoAnnotations.initMocks(this);
 
         // Given
-        CreateDogUseCaseImplementation useCase = new CreateDogUseCaseImplementation(dogRepository);
+        CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation useCase = new CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation(dogRepository);
         CreateDogRequest request = new CreateDogRequest("Fido", "Labrador", 5, 0);
 
         DogEntity savedDogEntity = DogEntity.builder()
@@ -73,7 +74,7 @@ class CreateDogUseCaseUnitTest {
         MockitoAnnotations.initMocks(this);
 
         // Given
-        CreateDogUseCaseImplementation useCase = new CreateDogUseCaseImplementation(dogRepository);
+        CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation useCase = new CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation(dogRepository);
         CreateDogRequest request = new CreateDogRequest("Buddy", "Golden Retriever", 3, 2);
 
         DogEntity savedDogEntity = DogEntity.builder()
@@ -98,7 +99,7 @@ class CreateDogUseCaseUnitTest {
         MockitoAnnotations.initMocks(this);
 
         // Given
-        CreateDogUseCaseImplementation useCase = new CreateDogUseCaseImplementation(dogRepository);
+        CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation useCase = new CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation(dogRepository);
         CreateDogRequest request = new CreateDogRequest("Max", "Poodle", 0, 0);
 
         DogEntity savedDogEntity = DogEntity.builder()
@@ -125,7 +126,7 @@ class CreateDogUseCaseUnitTest {
         MockitoAnnotations.initMocks(this);
 
         // Given
-        CreateDogUseCaseImplementation useCase = new CreateDogUseCaseImplementation(dogRepository);
+        CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation useCase = new CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation(dogRepository);
         CreateDogRequest request = new CreateDogRequest("", "Labrador", 5, 0);
 
         // When / Then
@@ -136,7 +137,7 @@ class CreateDogUseCaseUnitTest {
         MockitoAnnotations.initMocks(this);
 
         // Given
-        CreateDogUseCaseImplementation useCase = new CreateDogUseCaseImplementation(dogRepository);
+        CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation useCase = new CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation(dogRepository);
         CreateDogRequest request = new CreateDogRequest("Rex", "German Shepherd", -2, 0);
 
         // When / Then
@@ -147,7 +148,7 @@ class CreateDogUseCaseUnitTest {
         MockitoAnnotations.initMocks(this);
 
         // Given
-        CreateDogUseCaseImplementation useCase = new CreateDogUseCaseImplementation(dogRepository);
+        CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation useCase = new CreateAndDeleteDogUseCase.CreateDogUseCaseImplementation(dogRepository);
         CreateDogRequest request = new CreateDogRequest("Luna", null, 3, 0);
 
         // When / Then

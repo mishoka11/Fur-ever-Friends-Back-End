@@ -1,7 +1,7 @@
 package fontys.s3.Service;
 
-import fontys.s3.Domain.CreateDogRequest;
-import fontys.s3.Domain.CreateDogResponse;
+import fontys.s3.Domain.DogDomain.CreateDogRequest;
+import fontys.s3.Domain.DogDomain.CreateDogResponse;
 import fontys.s3.Persistence.Entity.DogEntity;
 import fontys.s3.Persistence.Implementation.DogRepositoryImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
