@@ -1,4 +1,4 @@
-package fontys.s3.Bussiness.Implementation.Login_Service;
+package fontys.s3.Domain.AuthenticationDomain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
-    private String username;
-    private String password;
+public class LoginResponse {
+    private String accessToken;
 }

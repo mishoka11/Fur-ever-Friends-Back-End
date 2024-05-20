@@ -4,6 +4,7 @@ plugins {
     id 'java'
     id 'jacoco'
     id "org.sonarqube" version "4.4.1.3373"
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 group = 'fontys.s3'
@@ -17,18 +18,24 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'javax.persistence:javax.persistence-api:2.2'
     implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
     implementation 'io.jsonwebtoken:jjwt-impl:0.11.2'
     implementation 'io.jsonwebtoken:jjwt-jackson:0.11.2'
     implementation 'mysql:mysql-connector-java:8.0.33'
+    implementation 'org.flywaydb:flyway-core'
+    implementation 'org.flywaydb:flyway-mysql'
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
-    implementation 'jakarta.validation:jakarta.validation-api:2.0.2'
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.0'
+    implementation 'org.hibernate.validator:hibernate-validator:7.0.2.Final'
+    testImplementation 'org.mockito:mockito-core:3.12.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
-    testImplementation 'org.mockito:mockito-core:3.12.4'
 }
 
 test {
@@ -47,10 +54,14 @@ sonarqube {
         property "sonar.projectKey", "Fur_ever_friends"
         property "sonar.projectName", "Fur_ever_friends"
         property "sonar.qualitygate.wait", true
-        property "sonar.host.url", "http://localhost:9000" // Adjust if necessary
+        property "sonar.host.url", "http://localhost:9000"
         property "sonar.java.coveragePlugin", "jacoco"
         property "sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
         property "sonar.login", "admin"
         property "sonar.password", "123m123M"
     }
+}
+
+kotlin {
+    jvmToolchain(17)
 }

@@ -13,7 +13,7 @@ final class DogConverter {
                 .name(dogEntity.getName())
                 .breed(dogEntity.getBreed())
                 .age(dogEntity.getAge())
-                .years(dogEntity.getYears())
+                .years(dogEntity.getDogYears())
                 .build();
     }
 }

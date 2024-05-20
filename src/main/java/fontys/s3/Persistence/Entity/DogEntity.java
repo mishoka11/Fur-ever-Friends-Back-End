@@ -1,31 +1,35 @@
 package fontys.s3.Persistence.Entity;
-import jakarta.persistence.*;
+
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 
+@Entity
 @Data
 @Builder
-@Entity
-@Table(name = "dog")
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "dogs")
 public class DogEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
-    public String name;
-    public String breed;
-    public int age;
-    public int years;
+    private Long id;
 
-    public DogEntity(Long id, String name, String breed, int age, int years) {
-        this.id = id;
-        this.name = name;
-        this.breed = breed;
-        this.age = age;
-        this.years = years;
-    }
+    @Column(nullable = false, length = 50)
+    private String name;
 
-    public DogEntity() {
+    @Column(nullable = false, length = 50)
+    private String breed;
 
-    }
+    @Column(nullable = false)
+    private int age;
+
+    @Column(nullable = false)
+    private int dogYears;
+
+    // Add other fields and relationships if needed
 }

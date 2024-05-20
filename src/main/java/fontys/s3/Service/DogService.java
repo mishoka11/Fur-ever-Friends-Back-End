@@ -3,7 +3,7 @@ package fontys.s3.Service;
 import fontys.s3.Domain.DogDomain.CreateDogRequest;
 import fontys.s3.Domain.DogDomain.CreateDogResponse;
 import fontys.s3.Persistence.Entity.DogEntity;
-import fontys.s3.Persistence.Implementation.DogRepositoryImplementation;
+import fontys.s3.Persistence.Implementation.Repositories.DogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +12,10 @@ import java.util.Optional;
 @Service
 public class DogService {
 
-    private final DogRepositoryImplementation dogRepository;
+    private final DogRepository dogRepository;
 
     @Autowired
-    public DogService(DogRepositoryImplementation dogRepository) {
+    public DogService(DogRepository dogRepository) {
         this.dogRepository = dogRepository;
     }
 
@@ -24,7 +24,7 @@ public class DogService {
                 .name(request.getName())
                 .breed(request.getBreed())
                 .age(request.getAge())
-                .years(request.getYears())
+                .dogYears(request.getYears())
                 .build();
 
         dogEntity = dogRepository.save(dogEntity);

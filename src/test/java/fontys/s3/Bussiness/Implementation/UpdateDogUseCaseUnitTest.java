@@ -3,7 +3,7 @@ package fontys.s3.Bussiness.Implementation;
 import fontys.s3.Bussiness.Implementation.Dog_Impl.UpdateDogUseCaseImplementation;
 import fontys.s3.Domain.DogDomain.UpdateDogRequest;
 import fontys.s3.Domain.DogDomain.UpdateDogResponse;
-import fontys.s3.Persistence.Implementation.DogRepository;
+import fontys.s3.Persistence.Implementation.Repositories.DogRepository;
 import fontys.s3.Persistence.Entity.DogEntity;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -156,6 +156,6 @@ class UpdateDogUseCaseUnitTest {
         // Then
         verify(dogRepository).save(existingDog); // Verify that dogRepository.save() is called with the existingDog
         assertEquals("Dog updated successfully", response.getMessage()); // Assert the success message
-        assertEquals(-1, existingDog.getYears()); // Assert that the years of the existing dog is updated to negative
+        assertEquals(-1, existingDog.getDogYears()); // Assert that the years of the existing dog is updated to negative
     }
 }
