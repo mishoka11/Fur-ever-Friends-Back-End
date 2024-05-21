@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class UserService {
@@ -50,7 +51,7 @@ public class UserService {
                 .username(request.getUsername())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword())) // This will be hashed
-                .userTypes(Collections.singletonList(userType))
+                .userTypes(Collections.singleton(userType))
                 .build();
 
         UserEntity savedUser = userRepository.save(user);

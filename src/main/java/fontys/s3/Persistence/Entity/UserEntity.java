@@ -1,39 +1,39 @@
 package fontys.s3.Persistence.Entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
-import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Entity
+@Table(name = "user")
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
+@NoArgsConstructor
 public class UserEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 50)
+    @NotNull
+    @Column(name = "username", unique=true)
     private String username;
 
-    @Column(nullable = false, unique = true, length = 50)
+    @NotNull
+    @Column(name = "email", unique=true)
     private String email;
 
-    @Column(nullable = false, length = 100)
+    @NotNull
+    @Column(name = "password")
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
-            name = "user_user_types",
+            name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_type_id")
-    )
-    private List<UserTypeEntity> userTypes;
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<UserTypeEntity> userTypes;
 }

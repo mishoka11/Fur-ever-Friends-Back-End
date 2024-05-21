@@ -1,9 +1,7 @@
 package fontys.s3.Bussiness.Implementation.User_Impl;
 
-
 import fontys.s3.Domain.UserDomain.CreateUserRequest;
 import fontys.s3.Domain.UserDomain.CreateUserResponse;
-import fontys.s3.Domain.UserDomain.UpdateUserRequest;
 import fontys.s3.Persistence.Entity.UserEntity;
 import fontys.s3.Persistence.Implementation.Repositories.UserRepository;
 import lombok.AllArgsConstructor;
@@ -22,7 +20,7 @@ public interface CreateUserUseCase {
         public CreateUserResponse createUser(CreateUserRequest request) {
             UserEntity userEntity = UserEntity.builder()
                     .username(request.getUsername())
-                    .email(request.getEmail())
+                    .email(request.getEmail()) // Ensure this line matches the field in UserEntity
                     .password(request.getPassword())
                     .build();
 

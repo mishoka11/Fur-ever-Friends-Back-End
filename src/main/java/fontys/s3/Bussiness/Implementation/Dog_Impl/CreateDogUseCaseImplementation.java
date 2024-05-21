@@ -5,11 +5,10 @@ import fontys.s3.Domain.DogDomain.CreateDogResponse;
 import fontys.s3.Persistence.Entity.DogEntity;
 import fontys.s3.Persistence.Implementation.Repositories.DogRepository;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class CreateDogUseCaseImplementation implements CreateDogUseCase {
     private final DogRepository dogRepository;
 

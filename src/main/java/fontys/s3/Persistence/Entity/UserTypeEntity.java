@@ -1,24 +1,22 @@
 package fontys.s3.Persistence.Entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 @Entity
+@Table(name = "role")
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "user_types")
+@NoArgsConstructor
 public class UserTypeEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 50)
+    @NotNull
+    @Column(name = "type_name")
     private String typeName;
 }
