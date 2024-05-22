@@ -32,7 +32,10 @@ public class DogEntity {
     @Column(name = "dog_years")
     private int dogYears;
 
+    @Column(name = "info")
+    private String information; // This should match the column name in your database
+
     @ManyToOne
-    @JoinColumn(name = "size_id")
+    @JoinColumn(name = "size_id", nullable = false)
     private DogSizeEntity size;
 }

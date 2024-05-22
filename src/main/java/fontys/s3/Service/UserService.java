@@ -8,25 +8,32 @@ import fontys.s3.Persistence.Entity.UserTypeEntity;
 import fontys.s3.Persistence.Implementation.Repositories.UserRepository;
 import fontys.s3.Persistence.Implementation.Repositories.UserTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
-@Service
-public class UserService {
+@Service("userService")
+public class UserService implements UserDetailsService {
+
+    private final UserRepository userRepository;
+    private final UserTypeRepository userTypeRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private UserTypeRepository userTypeRepository;
-
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
+    public UserService(UserRepository userRepository, UserTypeRepository userTypeRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.userTypeRepository = userTypeRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     public Optional<UserEntity> findUserById(Long id) {
         return userRepository.findById(id);
@@ -36,7 +43,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void deleteUserById(Long userId) {
+    public void deleteUserById(long userId) {
         userRepository.deleteById(userId);
     }
 
@@ -45,12 +52,13 @@ public class UserService {
             throw new UserAlreadyExistsException();
         }
 
-        UserTypeEntity userType = userTypeRepository.findByTypeName("Client"); // Or another logic to set the user type
+        UserTypeEntity userType = userTypeRepository.findByTypeName("Client");
 
         UserEntity user = UserEntity.builder()
                 .username(request.getUsername())
                 .email(request.getEmail())
-                .password(passwordEncoder.encode(request.getPassword())) // This will be hashed
+                .password(passwordEncoder.encode(request.getPassword()))
+                .roles(Set.of("ROLE_USER"))
                 .userTypes(Collections.singleton(userType))
                 .build();
 
@@ -68,7 +76,20 @@ public class UserService {
         user.setUsername(request.getUsername());
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.setRoles(request.getRoles());
 
         userRepository.save(user);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        UserEntity user = userRepository.findByEmail(email);
+        if (user == null) {
+            throw new UsernameNotFoundException("User not found");
+        }
+        return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
+                user.getRoles().stream()
+                        .map(role -> new SimpleGrantedAuthority(role))
+                        .collect(Collectors.toList()));
     }
 }

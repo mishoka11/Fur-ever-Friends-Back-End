@@ -1,4 +1,13 @@
-CREATE TABLE dogs (
+-- V2__Create_dogs_and_dog_sizes.sql
+
+-- Create dog_size table
+CREATE TABLE dog_size (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    size ENUM('SMALL', 'MEDIUM', 'LARGE') NOT NULL
+);
+
+-- Create dogs table
+CREATE TABLE dog (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     breed VARCHAR(50) NOT NULL,
@@ -10,17 +19,7 @@ CREATE TABLE dogs (
             ELSE 24 + (age - 2) * 4
         END
     ) STORED,
-    info VARCHAR(255)
+    info VARCHAR(255),
+    size_id BIGINT NOT NULL,
+    FOREIGN KEY (size_id) REFERENCES dog_size(id)
 );
-
-CREATE TABLE dog_size
-(
-    id int NOT NULL AUTO_INCREMENT,
-    dog_id int NOT NULL,
-    size varchar(50) NOT NULL,
-    PRIMARY KEY (id),
-    UNIQUE (dog_id, size),
-    FOREIGN KEY (dog_id) REFERENCES dogs (id)
-);
-
-    #size ENUM('small', 'medium', 'large') NOT NULL,

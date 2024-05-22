@@ -1,5 +1,12 @@
+# Stage 1: Build the application
 FROM gradle:7.3.3-jdk17 AS builder
-WORKDIR /opt/app
-COPY ./build/libs/Individual_Project_V1-1.0-SNAPSHOT.jar ./
+WORKDIR /app
+COPY . .
+RUN ./gradlew assemble --no-daemon
 
-ENTRYPOINT ["sh", "-c","java ${JAVA_OPTS} -jar Individual_Project_V1-1.0-SNAPSHOT.jar"]
+# Stage 2: Run the application
+FROM openjdk:17-jdk-alpine
+WORKDIR /app
+COPY --from=builder /app/build/libs/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]

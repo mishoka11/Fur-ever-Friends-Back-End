@@ -1,69 +1,65 @@
 package fontys.s3.Configuration.security.auth;
 
-
-import fontys.s3.Configuration.security.token.AccessToken;
-import fontys.s3.Configuration.security.token.AccessTokenDecoder;
-import fontys.s3.Configuration.security.token.exception.InvalidAccessTokenException;
+import fontys.s3.Configuration.security.token.impl.JwtUtil;
+import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.stream.Collectors;
 
 @Component
 public class AuthenticationRequestFilter extends OncePerRequestFilter {
 
-    private static final String SPRING_SECURITY_ROLE_PREFIX = "ROLE_";
+    private final JwtUtil jwtUtil;
+    private final UserDetailsService userDetailsService;
 
-    @Autowired
-    private AccessTokenDecoder accessTokenDecoder;
+    public AuthenticationRequestFilter(JwtUtil jwtUtil, @Qualifier("customUserDetailsService") UserDetailsService userDetailsService) {
+        this.jwtUtil = jwtUtil;
+        this.userDetailsService = userDetailsService;
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
             throws ServletException, IOException {
 
         final String requestTokenHeader = request.getHeader("Authorization");
-        if (requestTokenHeader == null || !requestTokenHeader.startsWith("Bearer ")) {
-            chain.doFilter(request, response);
-            return;
+
+        String username = null;
+        String jwtToken = null;
+
+        if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
+            jwtToken = requestTokenHeader.substring(7);
+            try {
+                username = jwtUtil.extractUsername(jwtToken);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Unable to get JWT Token");
+            } catch (ExpiredJwtException e) {
+                System.out.println("JWT Token has expired");
+            }
+        } else {
+            logger.warn("JWT Token does not begin with Bearer String");
         }
 
-        String accessTokenString = requestTokenHeader.substring(7);
+        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+            UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
 
-        try {
-            AccessToken accessToken = accessTokenDecoder.decode(accessTokenString);
-            setupSpringSecurityContext(accessToken);
-            chain.doFilter(request, response);
-        } catch (InvalidAccessTokenException e) {
-            logger.error("Error validating access token", e);
-            sendAuthenticationError(response);
+            if (jwtUtil.validateToken(jwtToken, userDetails)) {
+                UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
+                        userDetails, null, userDetails.getAuthorities());
+                usernamePasswordAuthenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+            }
         }
-    }
-
-    private void sendAuthenticationError(HttpServletResponse response) throws IOException {
-        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-        response.flushBuffer();
-    }
-
-    private void setupSpringSecurityContext(AccessToken accessToken) {
-        UserDetails userDetails = new User(accessToken.getSubject(), "",
-                accessToken.getRoles().stream()
-                        .map(role -> new SimpleGrantedAuthority(SPRING_SECURITY_ROLE_PREFIX + role))
-                        .collect(Collectors.toList()));
-
-        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
-                userDetails, null, userDetails.getAuthorities());
-        usernamePasswordAuthenticationToken.setDetails(accessToken);
-        SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+        chain.doFilter(request, response);
     }
 }

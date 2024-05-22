@@ -1,6 +1,5 @@
 package fontys.s3.Domain.AuthenticationDomain;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +13,7 @@ import jakarta.validation.constraints.NotBlank;
 @AllArgsConstructor
 public class LoginRequest {
     @NotBlank
-    private String username;
+    private String email;
     @NotBlank
     private String password;
 }

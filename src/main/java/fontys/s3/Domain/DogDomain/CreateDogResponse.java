@@ -1,4 +1,5 @@
 package fontys.s3.Domain.DogDomain;
+
 import lombok.Builder;
 import lombok.Data;
 

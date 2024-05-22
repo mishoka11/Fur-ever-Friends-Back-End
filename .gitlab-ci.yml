@@ -1,11 +1,10 @@
-
 variables:
     GRADLE_OPTS: "-Dorg.gradle.daemon=false"
 
 stages:
     - build
     - test
-    - sonarqube-check
+    - docker
 
 build:
     stage: build
@@ -17,21 +16,13 @@ test:
     script:
         - ./gradlew test
 
-sonarqube-check:
-    stage: sonarqube-check
+docker:
+    stage: docker
+    image: docker:latest
+    services:
+        - docker:dind
     script:
-        - ./gradlew test sonar jacocoTestReport
-
-#spring:
-#    datasource:
-#        url: jdbc:mysql://localhost:3306/MYSQL_IndividualPrj_S3?useSSL=false&serverTimezone=UTC
-#        username: root
-#        password: 123m123M
-#        driver-class-name: com.mysql.cj.jdbc.Driver
-#    jpa:
-#        properties:
-#            hibernate:
-#                dialect: org.hibernate.dialect.MySQL8Dialect
-#        hibernate:
-#            ddl-auto: update
-#        show-sql: true
+        - docker run -d --name mysql-db -e MYSQL_ROOT_PASSWORD=root_password -e MYSQL_DATABASE=your_database_name -e MYSQL_USER=user -e MYSQL_PASSWORD=password -p 3306:3306 mysql:8.0
+        - docker build -t fur-ever-friends-app .
+        - sleep 20  # Wait for MySQL to be fully up and running
+        - docker run -d --name fur-ever-friends-container-be -p 8080:8080 --link mysql-db:mysql fur-ever-friends-app

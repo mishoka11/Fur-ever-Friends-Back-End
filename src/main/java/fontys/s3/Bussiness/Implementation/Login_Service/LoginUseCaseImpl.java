@@ -23,7 +23,7 @@ public class LoginUseCaseImpl implements LoginUseCase {
 
     @Override
     public LoginResponse login(LoginRequest loginRequest) {
-        UserEntity user = userRepository.findByUsername(loginRequest.getUsername());
+        UserEntity user = userRepository.findByEmail(loginRequest.getEmail());
         if (user == null) {
             throw new InvalidCredentialsException();
         }
@@ -33,7 +33,7 @@ public class LoginUseCaseImpl implements LoginUseCase {
         }
 
         String accessToken = generateAccessToken(user);
-        return LoginResponse.builder().accessToken(accessToken).build();
+        return LoginResponse.builder().jwt(accessToken).build();
     }
 
     private boolean matchesPassword(String rawPassword, String encodedPassword) {
@@ -46,6 +46,6 @@ public class LoginUseCaseImpl implements LoginUseCase {
                 .toList();
 
         return accessTokenEncoder.encode(
-                new AccessTokenImpl(user.getUsername(), roles));
+                new AccessTokenImpl(user.getEmail(), roles));
     }
 }

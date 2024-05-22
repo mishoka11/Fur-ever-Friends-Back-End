@@ -4,21 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="App is not operational due to UnsatisfiedDependencyException for the dogImpl classes in the bussiness logic layer, authenticaton setup properly (not yet tested). After resolving the issue with the error the program should be up and running.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogSizeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/Size.java" afterDir="false" />
+    <list default="true" id="4f171a01-92b4-42a3-a166-96ac9b7a0a87" name="Changes" comment="App is now operational. Proceeding to testing.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Configuration/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Configuration/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Configuration/security/auth/PasswordEncoderConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Configuration/security/auth/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Configuration/security/token/impl/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/ChatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/DogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/ChatDomain/ChatMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Implementation/Repositories/DogSizeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/CreateDogUseCaseImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/CreateDogUseCaseImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/GetDogUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/GetDogUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/UpdateDogUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Dog_Impl/UpdateDogUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/CreateUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/User_Impl/CreateUserUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/GetAllDogsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/GetAllDogsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/LoginUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/LoginUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Bussiness/Implementation/Login_Service/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Configuration/security/auth/AuthenticationRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Configuration/security/auth/AuthenticationRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/DogsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/AuthenticationDomain/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/AuthenticationDomain/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/AuthenticationDomain/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/AuthenticationDomain/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/CreateDogRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/CreateDogRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/CreateDogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/DogDomain/CreateDogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/CreateUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Domain/UserDomain/CreateUserRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogSizeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/DogSizeEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/UserTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Entity/UserTypeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Implementation/Repositories/DogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Persistence/Implementation/Repositories/DogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Service/DogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Service/DogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fontys/s3/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fontys/s3/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/Migration/V2__Create_dogs_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/Migration/V2__Create_dogs_table.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +87,8 @@
         <option value="spring-beans.schema" />
         <option value="JUnit5 Test Class" />
         <option value="Kotlin Class" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -397,7 +415,10 @@
       <workItem from="1716207535795" duration="4953000" />
       <workItem from="1716213101779" duration="1268000" />
       <workItem from="1716225519987" duration="4586000" />
-      <workItem from="1716286839863" duration="1720000" />
+      <workItem from="1716286839863" duration="5669000" />
+      <workItem from="1716292653112" duration="3982000" />
+      <workItem from="1716370395243" duration="9107000" />
+      <workItem from="1716389710972" duration="1317000" />
     </task>
     <task id="LOCAL-00001" summary="1st itteration of the individual project.">
       <option name="closed" value="true" />
@@ -543,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716214369825</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="App is now operational. Proceeding to testing.">
+      <option name="closed" value="true" />
+      <created>1716288982565</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716288982565</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +605,8 @@
     <MESSAGE value="Added user CRUD, needs testing still" />
     <MESSAGE value="Added user CRUD, changes and functionalities need to be tested" />
     <MESSAGE value="App is not operational due to UnsatisfiedDependencyException for the dogImpl classes in the bussiness logic layer, authenticaton setup properly (not yet tested). After resolving the issue with the error the program should be up and running." />
-    <option name="LAST_COMMIT_MESSAGE" value="App is not operational due to UnsatisfiedDependencyException for the dogImpl classes in the bussiness logic layer, authenticaton setup properly (not yet tested). After resolving the issue with the error the program should be up and running." />
+    <MESSAGE value="App is now operational. Proceeding to testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="App is now operational. Proceeding to testing." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
