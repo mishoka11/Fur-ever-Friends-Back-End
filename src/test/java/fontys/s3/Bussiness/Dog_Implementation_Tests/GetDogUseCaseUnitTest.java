@@ -1,10 +1,13 @@
-package fontys.s3.Bussiness.Implementation;
+package fontys.s3.Bussiness.Dog_Implementation_Tests;
 
 import fontys.s3.Bussiness.Implementation.Dog_Impl.GetAllDogsUseCaseImplementation;
 import fontys.s3.Domain.DogDomain.GetAllDogsRequest;
 import fontys.s3.Domain.DogDomain.GetAllDogsResponse;
 import fontys.s3.Persistence.Implementation.Repositories.DogRepository;
 import fontys.s3.Persistence.Entity.DogEntity;
+import fontys.s3.Persistence.Entity.DogSizeEntity;
+import fontys.s3.Persistence.Entity.Size;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -14,22 +17,28 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 class GetDogUseCaseUnitTest {
 
     @Mock
     private DogRepository dogRepository;
 
+    private GetAllDogsUseCaseImplementation useCase;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+        useCase = new GetAllDogsUseCaseImplementation(dogRepository);
+    }
+
     @Test
     void testGetAllDogs_WithDogs() {
-        MockitoAnnotations.initMocks(this);
         // Given
-        GetAllDogsUseCaseImplementation useCase = new GetAllDogsUseCaseImplementation(dogRepository);
-
+        DogSizeEntity size = new DogSizeEntity(1L, Size.MEDIUM, null);
         List<DogEntity> dogs = Arrays.asList(
-                new DogEntity(1L, "Fido", "Labrador", 5, 0),
-                new DogEntity(2L, "Buddy", "Golden Retriever", 3, 1)
+                new DogEntity(1L, "Fido", "Labrador", 5, 0, "good boy", size),
+                new DogEntity(2L, "Buddy", "Golden Retriever", 3, 1, "gooder boy", size)
         );
 
         // Mock the behavior of dogRepository.findAll() method
@@ -44,10 +53,7 @@ class GetDogUseCaseUnitTest {
 
     @Test
     void testGetAllDogs_EmptyRepository() {
-        MockitoAnnotations.initMocks(this);
         // Given
-        GetAllDogsUseCaseImplementation useCase = new GetAllDogsUseCaseImplementation(dogRepository);
-
         // Mock the behavior of dogRepository.findAll() to return an empty list
         when(dogRepository.findAll()).thenReturn(Collections.emptyList());
 
@@ -60,10 +66,6 @@ class GetDogUseCaseUnitTest {
 
     @Test
     void testGetAllDogs_NullRequest() {
-        MockitoAnnotations.initMocks(this);
-        // Given
-        GetAllDogsUseCaseImplementation useCase = new GetAllDogsUseCaseImplementation(dogRepository);
-
         // When
         GetAllDogsResponse response = useCase.getAllDogs(null);
 
@@ -73,10 +75,7 @@ class GetDogUseCaseUnitTest {
 
     @Test
     void testGetAllDogs_RepositoryError() {
-        MockitoAnnotations.initMocks(this);
         // Given
-        GetAllDogsUseCaseImplementation useCase = new GetAllDogsUseCaseImplementation(dogRepository);
-
         // Mock the behavior of dogRepository.findAll() method to throw an exception
         when(dogRepository.findAll()).thenThrow(new RuntimeException("Database connection error"));
 
@@ -91,10 +90,6 @@ class GetDogUseCaseUnitTest {
 
     @Test
     void testGetAllDogs_NullDogEntities() {
-        MockitoAnnotations.initMocks(this);
-        // Given
-        GetAllDogsUseCaseImplementation useCase = new GetAllDogsUseCaseImplementation(dogRepository);
-
         // Mock the behavior of dogRepository.findAll() to return null
         when(dogRepository.findAll()).thenReturn(null);
 
@@ -106,14 +101,8 @@ class GetDogUseCaseUnitTest {
         assertNull(response.getDogs()); // Assert that the list of dogs in the response is null
     }
 
-
-
     @Test
     void testGetAllDogs_EmptyDogEntities() {
-        MockitoAnnotations.initMocks(this);
-        // Given
-        GetAllDogsUseCaseImplementation useCase = new GetAllDogsUseCaseImplementation(dogRepository);
-
         // Mock the behavior of dogRepository.findAll() to return an empty list
         when(dogRepository.findAll()).thenReturn(Collections.emptyList());
 

@@ -1,18 +1,21 @@
 package fontys.s3.Domain.DogDomain;
-import lombok.*;
+
+import fontys.s3.Persistence.Entity.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateDogRequest {
-    @Setter
     private long dogId;
     private String name;
     private String breed;
-    private int age;
-    private int years;
-
-    public void setId(long id) {
-    }
+    private Integer age;
+    private Integer years;
+    private String information;
+    private Size size;
 }
