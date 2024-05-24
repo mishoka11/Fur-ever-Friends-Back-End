@@ -33,7 +33,7 @@ public class DogEntity {
     private int dogYears;
 
     @Column(name = "info")
-    private String information; // This should match the column name in your database
+    private String information;
 
     @ManyToOne
     @JoinColumn(name = "size_id", nullable = false)

@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  mysql-db-BE:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 123m123M
+      MYSQL_DATABASE: your_database_name_1
+    ports:
+      - "3307:3306"  # Expose port 3306 on container as 3307 on host
+    networks:
+      - backend
+
+  backend-service:
+    build: .
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db-BE:3306/your_database_name_1
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123m123M
+    depends_on:
+      - mysql-db-BE
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

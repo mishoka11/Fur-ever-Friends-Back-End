@@ -18,4 +18,6 @@ public class CreateDogRequest {
     private Integer years;
     private String information;
     private Size size;
+
+
 }

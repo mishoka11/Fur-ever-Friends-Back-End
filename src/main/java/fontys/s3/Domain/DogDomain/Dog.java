@@ -1,5 +1,6 @@
 package fontys.s3.Domain.DogDomain;
 
+import fontys.s3.Persistence.Entity.Size;
 import lombok.Builder;
 import lombok.Data;
 
@@ -9,6 +10,8 @@ public class Dog {
     private Long id;
     private String name;
     private String breed;
-    private int age;
-    private int years;
+    private Integer age;
+    private Integer dogYears;
+    private String information;
+    private Size size;
 }
